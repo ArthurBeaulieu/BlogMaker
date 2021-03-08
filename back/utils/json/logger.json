@@ -1,0 +1,297 @@
+{
+  "B_LOGIN_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Login API submission does not contain a username and a password"
+  },
+  "B_LOGIN_MISSING_FIELD": {
+    "type": "warn",
+    "status": 400,
+    "log": "Login submission has been refused because some fields are not filled"
+  },
+  "B_LOGIN_INVALID_PASSWORD": {
+    "type": "warn",
+    "status": 401,
+    "log": "Login submission has been refused because the password does not match the provided user"
+  },
+  "B_LOGIN_USER_NOT_ACTIVE": {
+    "type": "warn",
+    "status": 400,
+    "log": "User is not verified, therefore not active"
+  },
+  "B_LOGIN_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Login submission successful for"
+  },
+  "B_REGISTER_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Register API submission does not contain a mandatory field in username, email, code, pass1 and pass2"
+  },
+  "B_REGISTER_MISSING_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Register submission has been refused because some fields are not filled"
+  },
+  "B_REGISTER_DIFFERENT_PASSWORDS": {
+    "type": "warn",
+    "status": 400,
+    "log": "Register submission has been refused because the two passwords do not match"
+  },
+  "B_REGISTER_PASSWORD_TOO_SHORT": {
+    "type": "warn",
+    "status": 400,
+    "log": "Register submission has been refused because the password must have a minimal length of"
+  },
+  "B_REGISTER_INVALID_CODE": {
+    "type": "warn",
+    "status": 400,
+    "log": "The provided invitation code is invalid or expired"
+  },
+  "B_REGISTER_EXISTING_USERNAME_AND_EMAIL": {
+    "type": "warn",
+    "status": 409,
+    "log": "Both username and email are taken in database"
+  },
+  "B_REGISTER_EXISTING_USERNAME": {
+    "type": "warn",
+    "status": 409,
+    "log": "This username is already taken in database"
+  },
+  "B_REGISTER_EXISTING_EMAIL": {
+    "type": "warn",
+    "status": 409,
+    "log": "This email is already taken in database"
+  },
+  "B_REGISTER_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Register submission successful for"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Change password POST submission does not contain a mandatory field in pass1, pass2 and pass3"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_EMPTY_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "No password modification were sent, all fields are empty"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_MISSING_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Some password fields are empty"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_INVALID_PASSWORD": {
+    "type": "warn",
+    "status": 401,
+    "log": "Update password submission has been refused because the password does not match the provided user"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_DIFFERENT_PASSWORDS": {
+    "type": "warn",
+    "status": 400,
+    "log": "The two provided passwords are not matching"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_SAME_PASSWORDS": {
+    "type": "warn",
+    "status": 400,
+    "log": "Submitted password is the same as current password"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_PASSWORD_TOO_SHORT": {
+    "type": "warn",
+    "status": 400,
+    "log": "Update password submission has been refused because the password must have a minimal length of"
+  },
+  "B_PROFILE_UPDATE_PASSWORD_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Password successfully updated"
+  },
+  "B_PROFILE_UPDATE_ROLE_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Update role POST submission does not contain a mandatory field in userId, roleId or checked"
+  },
+  "B_PROFILE_UPDATE_ROLE_MISSING_FIELD": {
+    "type": "warn",
+    "status": 400,
+    "log": "Missing user ID or role ID to update"
+  },
+  "B_PROFILE_UPDATE_ROLE_CANT_REMOVE_ADMIN_FROM_ROOT": {
+    "type": "warn",
+    "status": 400,
+    "log": "Can't revoke admin role from root user"
+  },
+  "B_PROFILE_UPDATE_ROLE_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Role successfully updated for"
+  },
+  "B_PROFILE_UPDATE_INFO_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Data sent to the server does not contain a mandatory field in username and email"
+  },
+  "B_PROFILE_UPDATE_INFO_MISSING_FIELD": {
+    "type": "warn",
+    "status": 400,
+    "log": "Missing username or email to update"
+  },
+  "B_PROFILE_UPDATE_INFO_NO_CHANGES": {
+    "type": "warn",
+    "status": 400,
+    "log": "No changes provided to user information"
+  },
+  "B_PROFILE_UPDATE_INFO_UPDATED": {
+    "type": "info",
+    "status": 200,
+    "log": "Profile info successfully updated"
+  },
+  "B_PROFILE_UPDATE_AVATAR_NOT_FOUND": {
+    "type": "warn",
+    "status": 400,
+    "log": "User have not the avatar to update"
+  },
+  "B_PROFILE_UPDATE_AVATAR_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Avatar successfully updated"
+  },
+  "B_PROFILE_DELETE_AVATAR_NOT_FOUND": {
+    "type": "warn",
+    "status": 400,
+    "log": "User have not the avatar to delete"
+  },
+  "B_PROFILE_DELETE_AVATAR_UNLINK_ERROR": {
+    "type": "warn",
+    "status": 400,
+    "log": "Unable to delete existing avatar from assets folder"
+  },
+  "B_PROFILE_DELETE_AVATAR_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Avatar successfully deleted from database"
+  },
+  "B_PROFILE_UPLOAD_AVATAR_SIZE_ERROR": {
+    "type": "warn",
+    "status": 400,
+    "log": "Uploaded image exceed the maximum pixel number for height/width"
+  },
+  "B_PROFILE_UPLOAD_AVATAR_RENAME_ERROR": {
+    "type": "warn",
+    "status": 400,
+    "log": "Unable to move temporary avatar to the avatar assets folder"
+  },
+  "B_PROFILE_UPLOAD_AVATAR_UNLINK_ERROR": {
+    "type": "warn",
+    "status": 400,
+    "log": "Unable to unlink avatar stored in temporary upload folder"
+  },
+  "B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": {
+    "type": "warn",
+    "status": 403,
+    "log": "Image sent to update avatar form is not a supported image"
+  },
+  "B_PROFILE_UPLOAD_AVATAR_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "New avatar successfully uploaded"
+  },
+  "B_USER_DELETE_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "User successfully deleted from database"
+  },
+  "B_USER_NOT_FOUND": {
+    "type": "warn",
+    "status": 404,
+    "log": "Can not find user in database"
+  },
+  "B_ROLE_NOT_FOUND": {
+    "type": "warn",
+    "status": 404,
+    "log": "Can not find role in database"
+  },
+  "B_AUTH_TOKEN_NOT_FOUND": {
+    "type": "warn",
+    "status": 404,
+    "log": "Can not find auth token in database"
+  },
+  "B_INVALID_FIELD": {
+    "type": "error",
+    "status": 400,
+    "log": "Provided form data is not matching the expected structure"
+  },
+  "B_MISSING_FIELD": {
+    "type": "warn",
+    "status": 400,
+    "log": "API submission does not contain a mandatory field"
+  },
+  "B_NEVER_KILL_ROOT": {
+    "type": "warn",
+    "status": 403,
+    "log": "Deleting root account is not permitted"
+  },
+  "B_ADMIN_SETTING_SET": {
+    "type": "info",
+    "status": 200,
+    "log": "%s admin setting properly updated"
+  },
+  "B_INTERNAL_ERROR_USER_FIND": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to find user in Users collection"
+  },
+  "B_INTERNAL_ERROR_USER_SAVE": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to save user in Users collection"
+  },
+  "B_INTERNAL_ERROR_USER_COUNT": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to count users in Users collection"
+  },
+  "B_INTERNAL_ERROR_USER_DELETE": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to delete user in Users collection"
+  },
+  "B_INTERNAL_ERROR_ROLE_FIND": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to find role in Roles collection"
+  },
+  "B_INTERNAL_ERROR_ROLE_SAVE": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to save role in Roles collection"
+  },
+  "B_INTERNAL_ERROR_AUTH_TOKEN_FIND": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to find auth token in AuthToken collection"
+  },
+  "B_INTERNAL_ERROR_AUTH_TOKEN_SAVE": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to save auth token in AuthToken collection"
+  },
+  "B_INTERNAL_ERROR_AUTH_TOKEN_DELETE": {
+    "type": "error",
+    "status": 500,
+    "log": "Database error when trying to delete auth token in AuthToken collection"
+  },
+  "B_INTERNAL_ERROR_FILE_UPLOAD": {
+    "type": "error",
+    "status": 500,
+    "log": "An error occurred when uploading file to the tmp folder"
+  },
+  "B_INTERNAL_ERROR_TEMPLATE_RENDERING": {
+    "type": "error",
+    "status": 500,
+    "log": "An error occurred when rendering the template as a string"
+  }
+}

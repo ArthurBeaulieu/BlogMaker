@@ -1,0 +1,6 @@
+{{#if this.isLoggedIn}}
+  <a href="/home">{{__ "home.nav.home"}}</a>
+{{else}}
+  <a href="/login">{{__ "auth.nav.login"}}</a>
+{{/if}}
+<p>{{__ "home.index.visibility"}}</p>

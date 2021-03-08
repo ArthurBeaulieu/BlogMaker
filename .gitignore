@@ -1,0 +1,6 @@
+.idea
+assets/img/avatars/
+assets/img/uploads/
+node_modules
+back/log
+.env

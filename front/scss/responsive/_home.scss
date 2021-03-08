@@ -1,0 +1,25 @@
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .feedback-wrapper {
+    justify-content: center;
+    left: 0;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  .page-navigation {
+    justify-content: center;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-content {
+    padding: 10rem 2rem 2rem;
+    max-width: 100%;
+  }
+}

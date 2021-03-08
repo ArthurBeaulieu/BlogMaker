@@ -1,0 +1,188 @@
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+
+.page-content {
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Display profile section */
+
+.profile-grid {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem 4rem;
+
+  .avatar-wrapper {
+    align-self: center;
+
+    img {
+      height: 15rem;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        border: solid 1px var(--color-border);
+        border-radius: var(--radius);
+        list-style: none;
+        margin-top: 1rem;
+        padding: .25rem 1rem;
+      }
+    }
+  }
+
+  .info-wrapper {
+    align-self: center;
+    position: relative;
+    text-align: left;
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+
+      .verified-account {
+        height: 1.9rem;
+        margin-left: .5rem;
+        vertical-align: bottom;
+      }
+    }
+
+    .edit-profile {
+      height: 2rem;
+      position: absolute;
+      right: -2rem; // Cancel page-content padding
+      top: 0;
+      width: 2rem;
+    }
+  }
+}
+
+/* Edit profile section */
+
+.edit-profile-wrapper {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  padding: 2rem 4rem;
+}
+
+.avatar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 50rem;
+
+  .avatar-wrapper {
+    height: 8rem;
+    margin: .5rem;
+    position: relative;
+    width: 8rem;
+
+    &:active .delete-avatar,
+    &:focus .delete-avatar,
+    &:hover .delete-avatar {
+      opacity: 1;
+    }
+
+    .avatar {
+      border-radius: 5px;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+
+      &.active {
+        border: solid #4ce797 2px;
+      }
+    }
+
+    .active-avatar,
+    .delete-avatar {
+      filter: drop-shadow(0px 0px 3px #fff);
+      height: 2.5rem;
+      position: absolute;
+      right: 0;
+      width: 2.5rem;
+    }
+
+    .active-avatar {
+      top: 0;
+    }
+
+    .delete-avatar {
+      cursor: pointer;
+      bottom: 0;
+      opacity: 0;
+
+      transition: opacity var(--transition) ease-out;
+    }
+  }
+}
+
+.edit-profile-grid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  margin-bottom: 2rem;
+}
+
+.upload-avatar,
+.update-info,
+.update-password {
+  label {
+    display: block;
+    font-style: italic;
+    text-align: left;
+  }
+
+  input {
+    margin-bottom: 1rem;
+
+    &[type="submit"] {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &[type="file"] {
+      max-width: 30rem;
+    }
+  }
+
+  input,
+  button {
+    display: block;
+    text-align: left;
+  }
+}
+
+.update-info,
+.update-password {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-avatar {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  label {
+    text-align: center;
+  }
+
+  input {
+    display: inline-block;
+    height: 3.4rem;
+    margin-left: 1rem;
+  }
+}

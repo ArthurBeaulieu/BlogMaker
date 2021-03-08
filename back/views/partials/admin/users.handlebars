@@ -1,0 +1,45 @@
+<a href="/admin" class="page-navigation">
+  <img src="/img/nav/previous.svg" alt="admin-page">
+  <p>{{__ "admin.nav.home"}}</p>
+</a>
+<div class="register-settings">
+  <div>
+    <label for="lock-registration">{{__ "admin.users.lockRegistration"}}</label>
+    <input id="lock-registration" type="checkbox" {{#if locked}}checked{{/if}}/>
+  </div>
+  <div>
+    <label for="max-depth">{{__ "admin.users.maxDepth"}}</label>
+    <input id="max-depth" type="number" min="0" max="10" value="{{depth}}"/>
+  </div>
+</div>
+<ul id="users-list" class="admin-user-list">
+  {{#each users}}
+    <li data-id="{{this.id}}">
+      <div class="avatar-wrapper">
+        <img src="{{this.avatar}}" alt="user-avatar">
+        <p class="user-roles">
+          {{#each this.roles}}
+          <span>
+            <label for="role{{this.id}}">{{this.name}}</label>
+            <input id="role{{this.id}}" type="checkbox" data-id="{{this.id}}" {{#if this.checked}}checked{{/if}}/>
+          </span>
+          {{/each}}
+        </p>
+        <button class="delete-user danger">{{../__ "admin.users.delete"}}</button>
+      </div>
+      <div class="user-wrapper">
+        <p>{{../__ "admin.users.username"}} : <b>{{username}}</b></p>
+        <p>{{../__ "admin.users.email"}} : <a href="mailto:{{this.email}}"><b>{{this.email}}{{#if this.isVerified}}<img src="/img/auth/verified.svg" class="verified-account" alt="verified-account">{{/if}}</b></a></p>
+        <p>{{../__ "admin.users.registration"}} : <b>{{this.registration}}</b></p>
+        <p>{{../__ "admin.users.lastLogin"}} : <b>{{this.lastLogin}}</b></p>
+        <p>{{../__ "admin.users.godfather"}} : <b>{{this.godfather}}</b></p>
+        <p>{{../__ "admin.users.depth"}} : <b>{{this.depth}}</b></p>
+        <p>{{../__ "admin.users.children"}} :
+          {{#each this.children}}
+            <span><b>{{this}}</b></span>
+          {{/each}}
+        </p>
+      </div>
+    </li>
+  {{/each}}
+</ul>

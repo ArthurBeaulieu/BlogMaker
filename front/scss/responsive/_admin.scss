@@ -1,0 +1,40 @@
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+    overflow-x: hidden;
+  }
+
+  .feedback-wrapper {
+    justify-content: center;
+    left: 0;
+    padding: 0 1rem;
+    top: 4rem;
+    width: 100%;
+  }
+
+  .page-navigation {
+    justify-content: center;
+    left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-content {
+    padding: 15rem 2rem 2rem;
+    max-width: 100%;
+  }
+
+  .admin-user-list li {
+    grid-gap: 2rem;
+    grid-template-columns: none;
+    padding: 2rem;
+
+    .user-wrapper {
+      text-align: center;
+
+      b {
+        display: block;
+      }
+    }
+  }
+}

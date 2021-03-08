@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{__ "index.headTitle"}}</title>
+  <meta name="description" content="{{__ "index.headDesc"}}">
+  <meta content="initial-scale=1" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link rel="stylesheet" href="/dist/index.bundle.css">
+  <link href="/img/logo/favicon.png" rel="icon" type="image/png">
+  {{! Twitter card display }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{__ "index.headTitle"}}">
+  <meta name="twitter:description" content="{{__ "index.headDesc"}}">
+  <meta name="twitter:image" content="/img/logo/favicon.png">
+  <meta name="twitter:image:alt" content="user stack logo">
+  {{! Facebook card display }}
+  <meta property="og:title" content="{{__ "index.headTitle"}}">
+  <meta property="og:description" content="{{__ "index.headDesc"}}">
+  <meta property="og:image" content="/img/logo/favicon.png">
+</head>
+<body>
+<h1>{{__ "index.pageTitle"}}</h1>
+{{{body}}}
+<script type="text/javascript" src="/dist/index.bundle.js"></script>
+</body>
+</html>

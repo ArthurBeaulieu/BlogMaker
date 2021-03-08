@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{__ "user.headTitle"}}</title>
+  <meta name="description" content="{{__ "user.headTitle"}}">
+  <meta content="initial-scale=1" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link rel="stylesheet" href="/dist/user.bundle.css">
+  <link href="/img/logo/favicon.png" rel="icon" type="image/png">
+</head>
+<body>
+<div class="feedback-wrapper">
+  <h1>{{__ "user.pageTitle"}}</h1>
+  {{> 'loader/lineloader'}}
+  <p id="error-output"></p>
+</div>
+<div class="page-content">
+  {{{body}}}
+</div>
+<script type="text/javascript" src="/dist/user.bundle.js"></script>
+</body>
+</html>

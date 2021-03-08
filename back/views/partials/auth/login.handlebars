@@ -1,0 +1,11 @@
+<h2>{{__ "auth.login.title"}}</h2>
+<form id="login-form">
+  <label for="username">{{__ "auth.login.username"}}</label>
+  <input id="username" type="text" name="username">
+  <label for="password">{{__ "auth.login.password"}}</label>
+  <input id="password" type="password" name="password">
+  <input id="login-submit" type="submit" value="{{__ "auth.login.submit"}}">
+</form>
+{{#if allowRegistration}}
+  <a href="/register">{{__ "auth.nav.register"}}</a>
+{{/if}}

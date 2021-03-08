@@ -1,0 +1,44 @@
+.modal-overlay {
+  align-items: center;
+  background-color: var(--color-bg-overlay);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  .modal {
+    background-color: var(--color-bg);
+    border: solid 1px var(--color-border);
+    border-radius: var(--radius);
+    max-width: 90%;
+    text-align: center;
+
+    .modal-head,
+    .modal-content,
+    .modal-foot {
+      padding: 2rem;
+    }
+
+    .modal-head {
+      background-color: var(--color-bg-darker);
+      position: relative;
+
+      .modal-close {
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+    }
+
+    .modal-content {
+      // Specific rules to write here
+    }
+
+    .modal-foot {
+      background-color: var(--color-bg-darker);
+    }
+  }
+}

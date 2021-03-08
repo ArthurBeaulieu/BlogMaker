@@ -1,0 +1,75 @@
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+
+.page-content {
+  max-width: 90%;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.register-settings {
+  font-weight: bold;
+
+  div {
+    margin-top: 1rem;
+  }
+
+  input {
+    margin-left: 1rem;
+
+    &[type="number"] {
+      width: 6rem;
+    }
+  }
+}
+
+.admin-user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    background-color: var(--color-bg);
+    border-radius: var(--radius);
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 2fr;
+    list-style: none;
+    padding: 2rem 4rem;
+    margin: 1rem;
+    text-align: center;
+
+    .avatar-wrapper {
+      img {
+        margin-bottom: 1rem;
+        width: 15rem;
+      }
+
+      button {
+        margin-top: 1rem;
+      }
+    }
+
+    .user-wrapper {
+      align-self: center;
+      text-align: left;
+
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+
+        .verified-account {
+          height: 1.9rem;
+          margin-left: .5rem;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

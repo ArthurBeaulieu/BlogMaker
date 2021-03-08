@@ -1,0 +1,173 @@
+{
+	"admin": {
+		"headTitle": "Administration",
+		"headDesc": "Page d'administration de UserStack",
+		"pageTitle": "UserStack - Administration",
+		"nav": {
+			"home": "Administration",
+			"users": "Liste d'utilisateurs"
+		},
+		"users": {
+			"lockRegistration": "Bloquer les inscriptions",
+			"maxDepth": "Profondeur maximale",
+			"username": "Nom d'utilisateur",
+			"email": "Adresse mail",
+			"registration": "Date d'inscription",
+			"lastLogin": "Date de dernière connexion",
+			"godfather": "Parrain",
+			"depth": "Profondeur depuis le compte administrateur",
+			"children": "Utilisateurs invités",
+			"adminRole": "Administrateur",
+			"userRole": "Utilisateur",
+			"delete": "Supprimer l'utilisateur"
+		}
+	},
+	"auth": {
+		"headTitle": "Authentification",
+		"headDesc": "Page d'authentification de UserStack",
+		"pageTitle": "UserStack - Authentification",
+		"nav": {
+			"login": "Se connecter",
+			"logout": "Se déconnecter",
+			"register": "S'enregistrer"
+		},
+		"activate": {
+			"title": "Activation du compte",
+			"error": "Le serveur n'est pas parvenu à envoyer un mail d'activation. Contactez l'administrateur",
+			"emailSent": "Un email de vérification à été envoyé à l'adresse %s ; cliquez sur le lien qu'il contiens pour activer votre compte",
+			"spamCheck": "Pensez à consulter votre dossier de pourriels si vous n'avez rien dans votre boîte de réception. Si toutefois vous n'avez rien reçu, rafraichissez cette page pour renvoyer un mail d'activation."
+		},
+		"login": {
+			"title": "Se connecter",
+			"username": "Nom d'utilisateur ou mail",
+			"password": "Mot de passe",
+			"submit": "Connexion"
+		},
+		"register": {
+			"title": "S'enregistrer",
+			"username": "Nom d'utilisateur",
+			"email": "Adresse mail",
+			"code": "Code d'invitation",
+			"password": "Mot de passe",
+			"confirmPassword": "Confirmer le mot de passe",
+			"submit": "S'enregistrer"
+		}
+	},
+	"home": {
+		"headTitle": "Page d'accueil privée",
+		"headDesc": "Page d'accueil pour les utilisateurs authentifiés",
+		"pageTitle": "UserStack - Page d'accueil privée",
+		"nav": {
+			"home": "Page d'accueil privée"
+		},
+		"index": {
+			"visibility": "Cette page est accessible pour tous et ne nécessite pas d'être enregistré sur le compte"
+		}
+	},
+	"index": {
+		"headTitle": "Bienvenu sur UserStack!",
+		"headDesc": "Un outil pour fournir un système de base d'authentification pour des applications web!",
+		"pageTitle": "UserStack - Page d'accueil publique",
+		"nav": {
+			"home": "Page publique"
+		}
+	},
+	"user": {
+		"headTitle": "Profil",
+		"headDesc": "Page du profil de UserStack",
+		"pageTitle": "UserStack - Profil",
+		"nav": {
+			"profile": "Profil"
+		},
+		"profile": {
+			"username": "Nom d'utilisateur",
+			"email": "Adresse mail",
+			"code": "Code d'invitation",
+			"depth": "Profondeur depuis le compte administrateur",
+			"godfather": "Parrain",
+			"registration": "Date d'inscription",
+			"lastLogin": "Date de dernière connexion",
+			"adminRole": "Administrateur",
+			"userRole": "Utilisateur"
+		},
+		"edit": {
+			"username": "Nom d'utilisateur",
+			"email": "Adresse mail",
+			"currentPassword": "Mot de passe actuel",
+			"newPassword": "Nouveau mot de passe",
+			"confirmNewPassword": "Confirmer le mot de passe",
+			"newAvatar": "Sélectionner un nouvel avatar",
+			"delete": "Supprimer le compte",
+			"submit": "Mettre à jour"
+		}
+	},
+	"modal": {
+		"deleteUser": {
+			"title": "Supprimer l'utilisateur",
+			"content": "Vous ètes sur le point de supprimer ce compte de la base de donnée. Cette action est irréversible",
+			"delete": "Supprimer le compte",
+			"close": "Annuler"
+		}
+	},
+	"errors": {
+		"B_LOGIN_INVALID_FIELD": "Les données envoyées au serveur doivent contenir un nom d'utilisateur et un mot de passe",
+		"B_LOGIN_MISSING_FIELD": "Un ou plusieurs champs obligatoires sont vides, assurez vous d'avoir remplis les informations nécessaires",
+		"B_LOGIN_INVALID_PASSWORD": "Le mot de passe fournis pour %s est invalide",
+		"B_LOGIN_USER_NOT_ACTIVE": "L'utilisateur n'est pas vérifié et par conséquent, inactif",
+		"B_LOGIN_SUCCESS": "Connexion réussie",
+		"B_REGISTER_INVALID_FIELD": "Les données envoyées au serveur doivent contenir un nom d'utilisateur, un email, un code et deux mots de passe identiques",
+		"B_REGISTER_MISSING_FIELD": "Un ou plusieurs champs obligatoires sont vides, assurez vous d'avoir remplis les informations nécessaires",
+		"B_REGISTER_DIFFERENT_PASSWORDS": "Les deux mots de passe fournis ne correspondent pas",
+		"B_REGISTER_PASSWORD_TOO_SHORT": "Le mot de passe doit contenir au minimum %s caractères",
+		"B_REGISTER_EXISTING_USERNAME_AND_EMAIL": "Le nom d'utilisateur et l'email fournis sont déjà utilisés",
+		"B_REGISTER_INVALID_CODE": "L'inscription a été refusée car le code est invalide",
+		"B_REGISTER_EXISTING_USERNAME": "Le nom d'utilisateur %s est déjà pris",
+		"B_REGISTER_EXISTING_EMAIL": "L'adresse mail %s est déjà utilisée",
+		"B_REGISTER_SUCCESS": "Inscription réussie",
+		"B_PROFILE_UPDATE_PASSWORD_INVALID_FIELD": "Les données envoyées au serveur doivent contenir trois mots de passes, l'actuel et le nouveau en deux fois",
+		"B_PROFILE_UPDATE_PASSWORD_EMPTY_FIELD": "Vous devez remplir les champs de mot de passe",
+		"B_PROFILE_UPDATE_PASSWORD_MISSING_FIELD": "Certains champs de mot de passe sont vides",
+		"B_PROFILE_UPDATE_PASSWORD_INVALID_PASSWORD": "Le mot de passe du compte %s est invalide",
+		"B_PROFILE_UPDATE_PASSWORD_DIFFERENT_PASSWORDS": "Les deux champs du nouveau mot de passe ne correspondent pas",
+		"B_PROFILE_UPDATE_PASSWORD_SAME_PASSWORDS": "Le nouveau mot de passe est le même que celui en utilisation",
+		"B_PROFILE_UPDATE_PASSWORD_PASSWORD_TOO_SHORT": "Le mot de passe doit contenir au minimum %s caractères",
+		"B_PROFILE_UPDATE_PASSWORD_SUCCESS": "Mot de passe changé avec succès",
+		"B_PROFILE_UPDATE_ROLE_INVALID_FIELD": "Les données envoyées au serveur doivent contenir un ID d'utilisateur, un ID de rôle et un statuts",
+		"B_PROFILE_UPDATE_ROLE_MISSING_FIELD": "ID d'utilisateur ou ID de rôle maquant",
+		"B_PROFILE_UPDATE_ROLE_CANT_REMOVE_ADMIN_FROM_ROOT": "Impossible de révoquer le rôle admin du compte principal",
+		"B_PROFILE_UPDATE_ROLE_SUCCESS": "Rôle mis à jour pour %s",
+		"B_PROFILE_UPDATE_INFO_INVALID_FIELD": "Les données envoyées au serveur doivent contenir un nom d'utilisateur et un email",
+		"B_PROFILE_UPDATE_INFO_MISSING_FIELD": "Nom d'utilisateur ou email manquant",
+		"B_PROFILE_UPDATE_INFO_NO_CHANGES": "Aucun changement demandés dans les champs fournis",
+		"B_PROFILE_UPDATE_INFO_UPDATED": "Le profil à été mis à jour avec succès",
+		"B_PROFILE_UPDATE_AVATAR_NOT_FOUND": "L'utilisateur ne possède pas l'avatar à mettre à jour",
+		"B_PROFILE_UPDATE_AVATAR_SUCCESS": "L'avatar à été mis à jour avec succès",
+		"B_PROFILE_DELETE_AVATAR_NOT_FOUND": "L'utilisateur ne possède pas l'avatar à supprimer",
+		"B_PROFILE_DELETE_AVATAR_UNLINK_ERROR": "Impossible de supprimer l'avatar du serveur",
+		"B_PROFILE_DELETE_AVATAR_SUCCESS": "L'avatar à été supprimé avec succès",
+		"B_PROFILE_UPLOAD_AVATAR_SIZE_ERROR": "L'image ne peux pas dépasser %s pixels de hauteur/largeur",
+		"B_PROFILE_UPLOAD_AVATAR_RENAME_ERROR": "Erreur pendant l'écriture de l'avatar sur le serveur",
+		"B_PROFILE_UPLOAD_AVATAR_UNLINK_ERROR": "Erreur pendant la sauvegarde de l'avatar sur le serveur",
+		"B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": "Le format de l'image envoyé n'est pas supporté",
+		"B_PROFILE_UPLOAD_AVATAR_SUCCESS": "Le nouvel avatar à été téléversé et mis à jour avec succès",
+		"B_USER_DELETE_SUCCESS": "L'utilisateur à été retiré de la base de donnée avec succès",
+		"B_USER_NOT_FOUND": "Impossible de trouver l'utilisateur dans la base de donnée",
+		"B_ROLE_NOT_FOUND": "Impossible de trouver le rôle dans la base de donnée",
+		"B_AUTH_TOKEN_NOT_FOUND": "Impossible de trouver le jeton d'authentification dans la base de donnée",
+		"B_INVALID_FIELD": "Les données fournies ne correspondent pas au format attendu",
+		"B_MISSING_FIELD": "Un ou plusieurs champs sont manquant pour valider le formulaire",
+		"B_NEVER_KILL_ROOT": "Il est interdit de supprimer le compte principal",
+		"B_ADMIN_SETTING_SET": "Paramètre d'administration %s mis à jour",
+		"B_INTERNAL_ERROR_USER_FIND": "Erreur de la base de donnée en essayant de trouver l'utilisateur dans la collection",
+		"B_INTERNAL_ERROR_USER_SAVE": "Erreur de la base de donnée en essayant de sauvegarder l'utilisateur dans la collection",
+		"B_INTERNAL_ERROR_USER_COUNT": "Erreur de la base de donnée en essayant dde compter les utilisateurs dans la collection",
+		"B_INTERNAL_ERROR_USER_DELETE": "Erreur de la base de donnée en essayant de supprimer l'utilisateur de la collection",
+		"B_INTERNAL_ERROR_ROLE_FIND": "Erreur de la base de donnée en essayant de trouver le rôle dans la collection",
+		"B_INTERNAL_ERROR_ROLE_SAVE": "Erreur de la base de donnée en essayant de sauvegarder le rôle dans la collection",
+		"B_INTERNAL_ERROR_AUTH_TOKEN_FIND": "Erreur de la base de donnée en essayant de trouver le jeton d'authentification dans la collection",
+		"B_INTERNAL_ERROR_AUTH_TOKEN_SAVE": "Erreur de la base de donnée en essayant de sauvegarder le jeton d'authentification de la collection",
+		"B_INTERNAL_ERROR_AUTH_TOKEN_DELETE": "Erreur de la base de donnée en essayant de supprimer le jeton d'authentification de la collection",
+		"B_INTERNAL_ERROR_FILE_UPLOAD": "Une erreur est survenue lors du téléversement du fichier vers le serveur",
+		"B_INTERNAL_ERROR_TEMPLATE_RENDERING": "Une erreur est survenue lors du rendu du modèle en tant que chaîne e caractères"
+	}
+}

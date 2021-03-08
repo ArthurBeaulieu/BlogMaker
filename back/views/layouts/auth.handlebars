@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{__ "auth.headTitle"}}</title>
+  <meta name="description" content="{{__ "auth.headDesc"}}">
+  <meta content="initial-scale=1" name="viewport">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <link rel="stylesheet" href="/dist/auth.bundle.css">
+  <link href="/img/logo/favicon.png" rel="icon" type="image/png">
+  {{! Twitter card display }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{__ "auth.headTitle"}}">
+  <meta name="twitter:description" content="{{__ "auth.headDesc"}}">
+  <meta name="twitter:image" content="/img/logo/favicon.png">
+  <meta name="twitter:image:alt" content="user stack logo">
+  {{! Facebook card display }}
+  <meta property="og:title" content="{{__ "auth.headTitle"}}">
+  <meta property="og:description" content="{{__ "auth.headDesc"}}">
+  <meta property="og:image" content="/img/logo/favicon.png">
+</head>
+<body>
+<div class="feedback-wrapper">
+  <h1>{{__ "auth.pageTitle"}}</h1>
+  {{> 'loader/lineloader'}}
+  <p id="error-output"></p>
+</div>
+<div class="page-content">
+  {{{body}}}
+</div>
+<script type="text/javascript" src="/dist/auth.bundle.js"></script>
+</body>
+</html>

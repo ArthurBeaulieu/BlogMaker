@@ -1,0 +1,7 @@
+<h2>{{__ "auth.activate.title"}}</h2>
+{{#if error}}
+  <p>{{__ "auth.activate.error"}}</p>
+{{else}}
+  <p>{{{__ "auth.activate.emailSent" email }}}</p>
+  <p>{{__ "auth.activate.spamCheck"}}</p>
+{{/if}}

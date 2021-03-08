@@ -1,0 +1,28 @@
+@keyframes line-loader-fadein {
+  100% {
+    filter: none;
+    opacity: 1;
+  }
+}
+
+@keyframes line-loader-first-dot {
+  100% {
+    filter: none;
+    opacity: 1;
+    transform: translate(1em);
+  }
+}
+
+@keyframes line-loader-middle-dots {
+  100% {
+    transform: translate(1em);
+  }
+}
+
+@keyframes line-loader-last-dot {
+  100% {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    transform: translate(2em);
+  }
+}
