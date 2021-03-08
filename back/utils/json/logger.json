@@ -204,6 +204,11 @@
     "status": 200,
     "log": "User successfully deleted from database"
   },
+  "B_ARTICLE_SAVE_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Article successfully saved in database"
+  },
   "B_USER_NOT_FOUND": {
     "type": "warn",
     "status": 404,
@@ -283,6 +288,11 @@
     "type": "error",
     "status": 500,
     "log": "Database error when trying to delete auth token in AuthToken collection"
+  },
+  "B_INTERNAL_ERROR_ARTICLE_SAVE": {
+    "type": "info",
+    "status": 500,
+    "log": "Database error when trying to save article in Article collection"
   },
   "B_INTERNAL_ERROR_FILE_UPLOAD": {
     "type": "error",

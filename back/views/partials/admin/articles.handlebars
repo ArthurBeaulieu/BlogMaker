@@ -1,0 +1,19 @@
+<a href="/admin" class="page-navigation">
+  <img src="/img/nav/previous.svg" alt="admin-page">
+  <p>{{__ "admin.nav.home"}}</p>
+</a>
+<a href="/admin/article/edit">New article</a>
+<ul id="articles-list" class="admin-article-list">
+  {{#each articles}}
+    <li>
+      <p>{{this.title}}</p>
+      <p>{{this.description}}</p>
+      <p>{{this.content}}</p>
+      <p>{{this.createdAt}}</p>
+      <p {{#if this.published}}class="published"{{/if}}>Published</p>
+      <!--<img src="/img/action/delete.svg" class="delete-article" alt="delete-article">-->
+      <a href="/admin/article/edit/{{this.id}}">Edit</a>
+    </li>
+  {{/each}}
+</ul>
+<p>{{page }}/{{pages}}</p>

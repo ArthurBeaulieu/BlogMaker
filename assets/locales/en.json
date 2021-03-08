@@ -5,7 +5,8 @@
 		"pageTitle": "BlogMaker - Administration",
 		"nav": {
 			"home": "Admin",
-			"users": "User list"
+			"users": "User list",
+			"articles": "Articles list"
 		},
 		"users": {
 			"lockRegistration": "Lock registration",
@@ -151,6 +152,7 @@
 		"B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": "Image sent to update avatar form is not a supported image",
 		"B_PROFILE_UPLOAD_AVATAR_SUCCESS": "New avatar successfully uploaded",
 		"B_USER_DELETE_SUCCESS": "User successfully deleted from database",
+		"B_ARTICLE_SAVE_SUCCESS": "Article successfully saved in database",
 		"B_USER_NOT_FOUND": "Can not find user in database",
 		"B_ROLE_NOT_FOUND": "Can not find role in database",
 		"B_AUTH_TOKEN_NOT_FOUND": "Can not find auth token in database",
@@ -167,7 +169,8 @@
 		"B_INTERNAL_ERROR_AUTH_TOKEN_FIND": "Database error when trying to find auth token in AuthToken collection",
 		"B_INTERNAL_ERROR_AUTH_TOKEN_SAVE": "Database error when trying to save auth token in AuthToken collection",
 		"B_INTERNAL_ERROR_AUTH_TOKEN_DELETE": "Database error when trying to delete auth token in AuthToken collection",
-		"B_INTERNAL_ERROR_FILE_UPLOAD": "An error occured when trying to save uploaded file to the server",
+		"B_INTERNAL_ERROR_ARTICLE_SAVE": "Database error when trying to save article in Article collection",
+		"B_INTERNAL_ERROR_FILE_UPLOAD": "An error occurred when trying to save uploaded file to the server",
 		"B_INTERNAL_ERROR_TEMPLATE_RENDERING": "An error occurred when rendering the template as a string"
 	}
 }

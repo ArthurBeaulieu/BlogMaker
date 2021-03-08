@@ -5,7 +5,8 @@
 		"pageTitle": "BlogMaker - Administration",
 		"nav": {
 			"home": "Administration",
-			"users": "Liste d'utilisateurs"
+			"users": "Liste d'utilisateurs",
+			"articles": "Liste des articles"
 		},
 		"users": {
 			"lockRegistration": "Bloquer les inscriptions",
@@ -151,6 +152,7 @@
 		"B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": "Le format de l'image envoyé n'est pas supporté",
 		"B_PROFILE_UPLOAD_AVATAR_SUCCESS": "Le nouvel avatar à été téléversé et mis à jour avec succès",
 		"B_USER_DELETE_SUCCESS": "L'utilisateur à été retiré de la base de donnée avec succès",
+		"B_ARTICLE_SAVE_SUCCESS": "L'Article à été sauvegardé avec succès",
 		"B_USER_NOT_FOUND": "Impossible de trouver l'utilisateur dans la base de donnée",
 		"B_ROLE_NOT_FOUND": "Impossible de trouver le rôle dans la base de donnée",
 		"B_AUTH_TOKEN_NOT_FOUND": "Impossible de trouver le jeton d'authentification dans la base de donnée",
@@ -167,6 +169,7 @@
 		"B_INTERNAL_ERROR_AUTH_TOKEN_FIND": "Erreur de la base de donnée en essayant de trouver le jeton d'authentification dans la collection",
 		"B_INTERNAL_ERROR_AUTH_TOKEN_SAVE": "Erreur de la base de donnée en essayant de sauvegarder le jeton d'authentification de la collection",
 		"B_INTERNAL_ERROR_AUTH_TOKEN_DELETE": "Erreur de la base de donnée en essayant de supprimer le jeton d'authentification de la collection",
+		"B_INTERNAL_ERROR_ARTICLE_SAVE": "Erreur de la base de donnée en essayant de sauvegarder l'article de la collection",
 		"B_INTERNAL_ERROR_FILE_UPLOAD": "Une erreur est survenue lors du téléversement du fichier vers le serveur",
 		"B_INTERNAL_ERROR_TEMPLATE_RENDERING": "Une erreur est survenue lors du rendu du modèle en tant que chaîne e caractères"
 	}

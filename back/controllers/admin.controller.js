@@ -1,5 +1,6 @@
 const UserHelper = require('../helpers/user.helper');
 const RoleHelper = require('../helpers/role.helper');
+const ArticleHelper = require('../helpers/article.helper');
 const utils = require('../utils/server.utils');
 
 
@@ -85,6 +86,117 @@ exports.adminUsersTemplate = (req, res) => {
       depth: global.settings.get('maxDepth'),
     });
   });
+};
+
+
+// Private template (for authenticated admin users), /admin/articles
+exports.adminArticlesTemplate = (req, res) => {
+  let page = 0;
+  if (req.params.page) {
+    page = req.params.page - 1;
+  }
+
+  const perPage = 10;
+  const currentPage = Math.max(0, page);
+
+  ArticleHelper.get({ perPage: perPage, page: currentPage }).then(opts => {
+    const articlesFormatted = [];
+
+    for (let i = 0; i < opts.articles.length; ++i) {
+      articlesFormatted.push({
+        id: opts.articles[i]._id,
+        createdAt: utils.formatDate(opts.articles[i].createdAt),
+        published: opts.articles[i].published,
+        title: opts.articles[i].title,
+        description: opts.articles[i].description,
+        content: opts.articles[i].content
+      });
+    }
+    // TODO handle page number way higher than max count
+    global.log.info('Rendering template for the /admin/articles page');
+    res.render('partials/admin/articles', {
+      layout : 'admin',
+      articles: articlesFormatted,
+      page: currentPage + 1,
+      pages: Math.round(opts.total / perPage) || 1
+    });
+  }).catch(opts => {
+    const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+    res.status(responseObject.status).send(responseObject);
+  });
+};
+
+
+// Private template (for authenticated admin users), /admin/article/edit
+exports.adminEditArticleTemplate = (req, res) => {
+  if (req.params.id) {
+    ArticleHelper.get({ id: req.params.id }).then(article => {
+      global.log.info('Rendering template for the /admin/article/edit page');
+      res.render('partials/admin/editarticle', {
+        layout : 'admin',
+        articleId: article._id,
+        articleTitle: article.title,
+        articleDescription: article.description,
+        articleContent: article.content
+      });
+    }).catch(opts => {
+      const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+      res.status(responseObject.status).send(responseObject);
+    });
+  } else {
+    global.log.info('Rendering template for the /admin/article/edit page');
+    res.render('partials/admin/editarticle', {
+      layout : 'admin',
+      articleId: '',
+      articleTitle: '',
+      articleDescription: '',
+      articleContent: ''
+    });
+  }
+};
+
+
+// Save an article to the database, /api/admin/article/save
+exports.saveArticle = (req, res) => {
+  const form = req.body;
+  let article = null;
+  const promises = [];
+  if (!form.id) {
+    article = ArticleHelper.new({
+      userId: req.userId,
+      createdAt: new Date(),
+      published: false,
+      title: form.title,
+      description: form.description,
+      content: form.content
+    });
+  } else {
+    promises.push(new Promise((resolve, reject) => {
+      ArticleHelper.get({ id: form.id }).then(savedArticle => {
+        article = savedArticle;
+        article.title = form.title;
+        article.description = form.description;
+        article.content = form.content;
+        resolve();
+      }).catch(reject);
+    }));
+  }
+
+  Promise.all(promises).then(() => {
+    ArticleHelper.save(article).then(() => {
+      const responseObject = global.log.buildResponseFromCode('B_ARTICLE_SAVE_SUCCESS', { url: '/admin/articles' });
+      res.status(responseObject.status).send(responseObject);
+    }).catch(opts => {
+      const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+      res.status(responseObject.status).send(responseObject);
+    });
+  }).catch();
+};
+
+
+// Publish an article to the database, /api/admin/article/publish
+exports.publishArticle = (req, res) => {
+
 };
 
 

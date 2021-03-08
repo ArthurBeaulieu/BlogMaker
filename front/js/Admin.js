@@ -105,3 +105,33 @@ if (lockRegistration && maxDepth && usersList) {
     kom.post('/api/admin/update/settings', parameters).then(processResponse).catch(processResponse);
   });
 }
+
+
+const saveArticle = document.querySelector('#save-article');
+const publishArticle = document.querySelector('#publish-article');
+if (saveArticle && publishArticle) {
+  const dom = {
+    error: document.querySelector('#error-output'),
+    loading: document.querySelector('#line-loader')
+  };
+
+  const processResponse = res => {
+    dom.loading.style.opacity = '0';
+
+    if (res.status === 200) {
+      window.location = res.url;
+    }
+  };
+
+  saveArticle.addEventListener('click', () => {
+    const parameters = {
+      id: document.querySelector('#edit-article-id').value,
+      title: document.querySelector('#edit-article-title').value,
+      description: document.querySelector('#edit-article-description').value,
+      content: document.querySelector('#edit-article-content').value
+    };
+
+    dom.loading.style.opacity = '1';
+    kom.post('/api/admin/article/save', parameters).then(processResponse).catch(processResponse);
+  });
+}
