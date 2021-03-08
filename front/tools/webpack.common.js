@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../../assets/dist'),
-    library: 'UserStack', // We set a library name to bundle the export default of the class
+    library: 'BlogMaker', // We set a library name to bundle the export default of the class
     libraryTarget: 'window', // Make it globally available
     libraryExport: 'default' // Make APST.default become APST
   },

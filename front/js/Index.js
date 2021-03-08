@@ -10,7 +10,7 @@ class Index {
 
 
   _init() {
-    console.log('Welcome to UserStack');
+    console.log('Welcome to BlogMaker');
   }
 
 

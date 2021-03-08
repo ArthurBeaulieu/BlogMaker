@@ -45,7 +45,7 @@ exports.i18nLocal = (req, phrase) => {
 // On first launch, it will populate the role collection
 exports.initSequence = () => {
   return new Promise((resolve, reject) => {
-    global.log.info('UserStack init sequence to control the database state');
+    global.log.info('BlogMaker init sequence to control the database state');
     const promises = [];
     // Check user roles collection
     promises.push(new Promise((resolve, reject) => {

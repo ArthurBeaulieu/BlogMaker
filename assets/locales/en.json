@@ -1,8 +1,8 @@
 {
 	"admin": {
 		"headTitle": "Administration",
-		"headDesc": "Administration page for UserStack application",
-		"pageTitle": "UserStack - Administration",
+		"headDesc": "Administration page for BlogMaker application",
+		"pageTitle": "BlogMaker - Administration",
 		"nav": {
 			"home": "Admin",
 			"users": "User list"
@@ -24,8 +24,8 @@
 	},
 	"auth": {
 		"headTitle": "Authentication",
-		"headDesc": "Authentication page for UserStack application",
-		"pageTitle": "UserStack - Authentication",
+		"headDesc": "Authentication page for BlogMaker application",
+		"pageTitle": "BlogMaker - Authentication",
 		"nav": {
 			"login": "Login",
 			"logout": "Logout",
@@ -56,7 +56,7 @@
 	"home": {
 		"headTitle": "Private homepage",
 		"headDesc": "Homepage for authenticated users",
-		"pageTitle": "UserStack - Homepage",
+		"pageTitle": "BlogMaker - Homepage",
 		"nav": {
 			"home": "Homepage"
 		},
@@ -65,17 +65,17 @@
 		}
 	},
 	"index": {
-		"headTitle": "Welcome to UserStack!",
+		"headTitle": "Welcome to BlogMaker!",
 		"headDesc": "A tool that provides a basic user stack with roles for any kind of web app!",
-		"pageTitle": "UserStack - Public",
+		"pageTitle": "BlogMaker - Public",
 		"nav": {
 			"home": "Public site"
 		}
 	},
 	"user": {
 		"headTitle": "User",
-		"headDesc": "Profile page for UserStack application",
-		"pageTitle": "UserStack - User",
+		"headDesc": "Profile page for BlogMaker application",
+		"pageTitle": "BlogMaker - User",
 		"nav": {
 			"profile": "Profile"
 		},

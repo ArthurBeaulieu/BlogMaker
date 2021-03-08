@@ -1,8 +1,8 @@
 {
 	"admin": {
 		"headTitle": "Administration",
-		"headDesc": "Page d'administration de UserStack",
-		"pageTitle": "UserStack - Administration",
+		"headDesc": "Page d'administration de BlogMaker",
+		"pageTitle": "BlogMaker - Administration",
 		"nav": {
 			"home": "Administration",
 			"users": "Liste d'utilisateurs"
@@ -24,8 +24,8 @@
 	},
 	"auth": {
 		"headTitle": "Authentification",
-		"headDesc": "Page d'authentification de UserStack",
-		"pageTitle": "UserStack - Authentification",
+		"headDesc": "Page d'authentification de BlogMaker",
+		"pageTitle": "BlogMaker - Authentification",
 		"nav": {
 			"login": "Se connecter",
 			"logout": "Se déconnecter",
@@ -56,7 +56,7 @@
 	"home": {
 		"headTitle": "Page d'accueil privée",
 		"headDesc": "Page d'accueil pour les utilisateurs authentifiés",
-		"pageTitle": "UserStack - Page d'accueil privée",
+		"pageTitle": "BlogMaker - Page d'accueil privée",
 		"nav": {
 			"home": "Page d'accueil privée"
 		},
@@ -65,17 +65,17 @@
 		}
 	},
 	"index": {
-		"headTitle": "Bienvenu sur UserStack!",
+		"headTitle": "Bienvenu sur BlogMaker!",
 		"headDesc": "Un outil pour fournir un système de base d'authentification pour des applications web!",
-		"pageTitle": "UserStack - Page d'accueil publique",
+		"pageTitle": "BlogMaker - Page d'accueil publique",
 		"nav": {
 			"home": "Page publique"
 		}
 	},
 	"user": {
 		"headTitle": "Profil",
-		"headDesc": "Page du profil de UserStack",
-		"pageTitle": "UserStack - Profil",
+		"headDesc": "Page du profil de BlogMaker",
+		"pageTitle": "BlogMaker - Profil",
 		"nav": {
 			"profile": "Profil"
 		},

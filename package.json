@@ -1,22 +1,22 @@
 {
   "name": "user-stack",
-  "version": "1.0.0",
-  "description": "UserStack",
+  "version": "0.0.1",
+  "description": "BlogMaker",
   "keywords": [],
-  "main": "back/UserStackServer.js",
+  "main": "back/BlogMakerServer.js",
   "scripts": {
     "build": "webpack --config front/tools/webpack.prod.js ",
     "watch": "webpack --watch --config front/tools/webpack.dev.js",
-    "start": "node back/UserStackServer.js",
+    "start": "node back/BlogMakerServer.js",
     "beforecommit": "npm run build"
   },
-  "homepage": "https://github.com/ArthurBeaulieu/UserStack",
+  "homepage": "https://github.com/ArthurBeaulieu/BlogMaker",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArthurBeaulieu/UserStack.git"
+    "url": "git+https://github.com/ArthurBeaulieu/BlogMaker.git"
   },
   "bugs": {
-    "url": "https://github.com/ArthurBeaulieu/UserStack/issues"
+    "url": "https://github.com/ArthurBeaulieu/BlogMaker/issues"
   },
   "author": "Arthur Beaulieu",
   "license": "GPL-3.0",
