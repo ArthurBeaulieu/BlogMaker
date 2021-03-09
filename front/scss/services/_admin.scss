@@ -1,16 +1,13 @@
 body {
-  align-items: center;
-  display: flex;
   height: 100vh;
-  justify-content: center;
   position: relative;
   width: 100vw;
 }
 
 .page-content {
-  max-width: 90%;
-  padding: 2rem 4rem;
+  height: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .register-settings {
@@ -71,5 +68,55 @@ body {
         }
       }
     }
+  }
+}
+
+.new-article {
+  align-items: center;
+  background-color: var(--color-bg);
+  border: solid 1px var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 2rem;
+  text-decoration: none;
+  top: 2rem;
+
+  img {
+    height: 2rem;
+    padding-left: 1rem;
+  }
+}
+
+nav {
+  height: 8rem;
+  position: relative;
+  width: 100%;
+}
+
+main {
+  height: calc(100% - 8rem);
+  overflow-y: auto;
+  padding: 2rem 4rem;
+  width: 100%;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: calc(100% - 4rem);
+
+    li {
+      list-style: none;
+
+      img {
+        height: 3rem;
+      }
+    }
+  }
+
+  p.pagination {
+    height: 4rem;
+    line-height: 4rem;
   }
 }

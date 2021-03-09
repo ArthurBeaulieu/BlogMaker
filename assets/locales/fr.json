@@ -152,6 +152,7 @@
 		"B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": "Le format de l'image envoyé n'est pas supporté",
 		"B_PROFILE_UPLOAD_AVATAR_SUCCESS": "Le nouvel avatar à été téléversé et mis à jour avec succès",
 		"B_USER_DELETE_SUCCESS": "L'utilisateur à été retiré de la base de donnée avec succès",
+		"B_ARTICLE_PUBLISHED_SUCCESS": "Statut de publication de l'article mis à jour",
 		"B_ARTICLE_SAVE_SUCCESS": "L'Article à été sauvegardé avec succès",
 		"B_USER_NOT_FOUND": "Impossible de trouver l'utilisateur dans la base de donnée",
 		"B_ROLE_NOT_FOUND": "Impossible de trouver le rôle dans la base de donnée",

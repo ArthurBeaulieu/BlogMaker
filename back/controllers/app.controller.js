@@ -1,15 +1,41 @@
 const UserHelper = require('../helpers/user.helper');
+const ArticleHelper = require('../helpers/article.helper');
 
 
 // Public template, /
 exports.publicHomepageTemplate = (req, res) => {
   global.log.info('Request template for the / page');
   UserHelper.isLoggedIn(req).then(isLoggedIn => {
-    global.log.info('Rendering template for the / page');
-    res.render('partials/index/main', {
-      layout : 'index',
-      lang: req.locale,
-      isLoggedIn: isLoggedIn
+
+    const perPage = 10;
+    const currentPage = Math.max(0, 0);
+
+    ArticleHelper.get({ filter: { published: true }, perPage: perPage, page: currentPage }).then(opts => {
+      const articlesFormatted = [];
+
+      for (let i = 0; i < opts.articles.length; ++i) {
+        articlesFormatted.push({
+          id: opts.articles[i]._id,
+          createdAt: opts.articles[i].createdAt,
+          published: opts.articles[i].published,
+          title: opts.articles[i].title,
+          description: opts.articles[i].description,
+          content: opts.articles[i].content
+        });
+      }
+      // TODO handle page number way higher than max count
+      global.log.info('Rendering template for the / page');
+      res.render('partials/index/main', {
+        layout : 'index',
+        lang: req.locale,
+        isLoggedIn: isLoggedIn,
+        articles: articlesFormatted,
+        page: currentPage + 1,
+        pages: Math.round(opts.total / perPage) || 1
+      });
+    }).catch(opts => {
+      const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+      res.status(responseObject.status).send(responseObject);
     });
   });
 };

@@ -10,8 +10,9 @@
   <label for="edit-article-content">Article content</label>
   <textarea id="edit-article-content" name="content">{{articleContent}}</textarea>
   <input id="edit-article-id" type="text" name="id" value="{{articleId}}" hidden>
+  <label for="publish-article">Published</label>
+  <input id="publish-article" type="checkbox" {{#if articlePublished}}checked{{/if}}>
   <button id="save-article">Save</button>
-  <button id="publish-article">Publish</button>
 </div>
 <div>
   <h1>Article title</h1>

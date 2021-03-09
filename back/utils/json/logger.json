@@ -204,6 +204,11 @@
     "status": 200,
     "log": "User successfully deleted from database"
   },
+  "B_ARTICLE_PUBLISHED_SUCCESS": {
+    "type": "info",
+    "status": 200,
+    "log": "Article published status updated"
+  },
   "B_ARTICLE_SAVE_SUCCESS": {
     "type": "info",
     "status": 200,

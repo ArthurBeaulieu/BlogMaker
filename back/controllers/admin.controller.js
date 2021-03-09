@@ -137,7 +137,8 @@ exports.adminEditArticleTemplate = (req, res) => {
         articleId: article._id,
         articleTitle: article.title,
         articleDescription: article.description,
-        articleContent: article.content
+        articleContent: article.content,
+        articlePublished: article.published
       });
     }).catch(opts => {
       const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
@@ -150,7 +151,8 @@ exports.adminEditArticleTemplate = (req, res) => {
       articleId: '',
       articleTitle: '',
       articleDescription: '',
-      articleContent: ''
+      articleContent: '',
+      articlePublished: false
     });
   }
 };
@@ -196,7 +198,20 @@ exports.saveArticle = (req, res) => {
 
 // Publish an article to the database, /api/admin/article/publish
 exports.publishArticle = (req, res) => {
-
+  const form = req.body;
+  ArticleHelper.get({ id: form.id }).then(savedArticle => {
+    savedArticle.published = form.published;
+    ArticleHelper.save(savedArticle).then(() => {
+      const responseObject = global.log.buildResponseFromCode('B_ARTICLE_PUBLISHED_SUCCESS', { url: '/admin/articles' });
+      res.status(responseObject.status).send(responseObject);
+    }).catch(opts => {
+      const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+      res.status(responseObject.status).send(responseObject);
+    });
+  }).catch(opts => {
+    const responseObject = global.log.buildResponseFromCode(opts.code, {}, opts.err);
+    res.status(responseObject.status).send(responseObject);
+  });
 };
 
 

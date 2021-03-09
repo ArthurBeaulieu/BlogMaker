@@ -4,3 +4,14 @@
   <a href="/login">{{__ "auth.nav.login"}}</a>
 {{/if}}
 <p>{{__ "home.index.visibility"}}</p>
+
+<ul class="articles list">
+  {{#each articles}}
+    <li>
+      <p>{{this.title}}</p>
+      <p>{{this.description}}</p>
+      <p>{{this.content}}</p>
+      <p>{{this.createdAt}}</p>
+    </li>
+  {{/each}}
+</ul>

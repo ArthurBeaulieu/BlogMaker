@@ -45,20 +45,8 @@ exports.get = opts => {
         rejection(articleFindErr, article);
         resolve(article);
       });
-    } else if (opts.filter) {
-      if (opts.multiple) {
-        Article.find(opts.filter, (articleFindErr, articles) => {
-          rejection(articleFindErr, articles);
-          resolve(articles);
-        });
-      } else {
-        Article.findOne(opts.filter, (articleFindErr, article) => {
-          rejection(articleFindErr, article);
-          resolve(article);
-        });
-      }
     } else {
-      Article.find().limit(opts.perPage).skip(opts.perPage * opts.page).sort({ createdAt: -1 }).exec((err, articles) => {
+      Article.find(opts.filter).limit(opts.perPage).skip(opts.perPage * opts.page).sort({ createdAt: -1 }).exec((err, articles) => {
         Article.countDocuments().exec((err, count) => {
           resolve({ articles: articles, total: count });
         });

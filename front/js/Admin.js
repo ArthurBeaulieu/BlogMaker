@@ -123,12 +123,23 @@ if (saveArticle && publishArticle) {
     }
   };
 
+  publishArticle.addEventListener('change', () => {
+    const parameters = {
+      id: document.querySelector('#edit-article-id').value,
+      published: publishArticle.checked
+    };
+
+    dom.loading.style.opacity = '1';
+    kom.post('/api/admin/article/publish', parameters).then(processResponse).catch(processResponse);
+  });
+
   saveArticle.addEventListener('click', () => {
     const parameters = {
       id: document.querySelector('#edit-article-id').value,
       title: document.querySelector('#edit-article-title').value,
       description: document.querySelector('#edit-article-description').value,
-      content: document.querySelector('#edit-article-content').value
+      content: document.querySelector('#edit-article-content').value,
+      published: publishArticle.checked
     };
 
     dom.loading.style.opacity = '1';

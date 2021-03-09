@@ -152,6 +152,7 @@
 		"B_PROFILE_UPLOAD_AVATAR_UNSUPPORTED_FORMAT": "Image sent to update avatar form is not a supported image",
 		"B_PROFILE_UPLOAD_AVATAR_SUCCESS": "New avatar successfully uploaded",
 		"B_USER_DELETE_SUCCESS": "User successfully deleted from database",
+		"B_ARTICLE_PUBLISHED_SUCCESS": "Article published status updated",
 		"B_ARTICLE_SAVE_SUCCESS": "Article successfully saved in database",
 		"B_USER_NOT_FOUND": "Can not find user in database",
 		"B_ROLE_NOT_FOUND": "Can not find role in database",
