@@ -1,18 +1,14 @@
-body {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  position: relative;
-  width: 100vw;
+.feedback-wrapper {
+  @include feedback-wrapper;
 }
 
-.page-content {
+.form-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-bg);
   border-radius: var(--radius);
-  max-width: 90%;
   padding: 2rem 4rem;
-  text-align: center;
 }
 
 form {

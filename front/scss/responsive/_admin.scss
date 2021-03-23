@@ -1,39 +1,28 @@
 @media screen and (max-width: 640px) {
-  body {
-    display: block;
-    overflow-x: hidden;
-  }
-
-  .feedback-wrapper {
+  nav {
+    flex-direction: column;
+    height: 8rem;
     justify-content: center;
-    left: 0;
-    padding: 0 1rem;
-    top: 4rem;
-    width: 100%;
-  }
-
-  .page-navigation {
-    justify-content: center;
-    left: 0;
     text-align: center;
-    width: 100%;
+
+    .page-navigation {
+      left: 0;
+      position: relative;
+    }
   }
 
-  .page-content {
-    padding: 15rem 2rem 2rem;
-    max-width: 100%;
-  }
+  main  {
+    align-items: center;
+    height: auto;
+    justify-content: flex-start;
+    padding: 1rem;
 
-  .admin-user-list li {
-    grid-gap: 2rem;
-    grid-template-columns: none;
-    padding: 2rem;
-
-    .user-wrapper {
-      text-align: center;
-
-      b {
-        display: block;
+    &.admin-user-list-wrapper {
+      .admin-user-list {
+        li {
+          grid-template-columns: 1fr;
+          padding: 2rem;
+        }
       }
     }
   }

@@ -1,18 +1,21 @@
-<a href="/home" class="page-navigation">
+<nav>
+  <a href="/home" class="page-navigation">
     <img src="/img/nav/home.svg" alt="home-page">
-  <p>{{__ "home.nav.home"}}</p>
-</a>
-<div class="menu-wrapper">
-  <a href="/admin/users">
+    <p>{{__ "home.nav.home"}}</p>
+  </a>
+  <h1>{{__ "admin.pageTitle"}}</h1>
+</nav>
+<main class="admin-menu-wrapper">
+  <a href="/admin/users" class="admin-menu-entry">
     <div class="menu-item">
       <img src="/img/auth/users.svg" alt="users-list">
       <p>{{__ "admin.nav.users"}}</p>
     </div>
   </a>
-  <a href="/admin/articles">
+  <a href="/admin/articles" class="admin-menu-entry">
     <div class="menu-item">
       <img src="/img/blog/articles.svg" alt="articles-list">
       <p>{{__ "admin.nav.articles"}}</p>
     </div>
   </a>
-</div>
+</main>

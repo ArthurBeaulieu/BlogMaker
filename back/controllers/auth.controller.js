@@ -94,7 +94,7 @@ const _finalizeRegistration = opts => {
         }
       }
       // Generate and assign avatar to the user
-      const avatarName = `${utils.genAvatarName()}`;
+      const avatarName = `${utils.genAvatarName(opts.user.username + new Date())}`;
       new identicon(avatarName);
       opts.user.avatar = `${avatarName}.png`;
       opts.user.avatarList.push(`${avatarName}.png`);

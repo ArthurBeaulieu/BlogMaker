@@ -25,6 +25,9 @@ html {
 
 body {
   font-size: 1.2rem;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
 }
 
 input,
@@ -70,72 +73,37 @@ button {
   }
 }
 
-.feedback-wrapper {
+nav {
   align-items: center;
+  background-color: var(--color-bg);
   display: flex;
-  flex-direction: column;
-  left: 0;
-  margin-left: 50%;
-  margin-top: 2rem;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transform: translateX(-50%);
+  height: 5rem;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 
-  p {
-    font-style: italic;
-  }
-}
-
-.page-navigation {
-  align-items: center;
-  display: flex;
-  left: 2rem;
-  position: absolute;
-  text-decoration: none;
-  top: 2rem;
-
-  img {
-    height: 2rem;
-    padding-right: 1rem;
-  }
-}
-
-.menu-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  .menu-item {
+  .page-navigation {
     align-items: center;
-    border: solid 3px var(--color-border);
-    border-radius: var(--radius);
-    box-sizing: content-box;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1rem;
-    padding: 2rem 3rem;
-    width: 10rem;
-
-    transition: background-color var(--transition) ease-in;
-
-    &:active,
-    &:focus,
-    &:hover {
-      background-color: var(--color-bg);
-    }
+    left: 2rem;
+    position: absolute;
+    text-decoration: none;
 
     img {
-      height: 3rem;
-      margin-bottom: 1rem;
-      width: 3rem;
+      height: 2rem;
+      padding-right: 1rem;
     }
   }
+}
 
-  a {
-    font-weight: bold;
-    text-decoration: none;
-  }
+main {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 5rem);
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
 }

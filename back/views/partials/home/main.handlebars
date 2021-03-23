@@ -1,28 +1,31 @@
-<div class="menu-wrapper">
+<nav>
+  <h1>{{__ "home.pageTitle"}}</h1>
+</nav>
+<main class="home-menu-wrapper">
   {{#if this.isAdmin}}
-    <a href="/admin">
+    <a href="/admin" class="home-menu-entry">
       <div class="menu-item">
         <img src="/img/auth/admin.svg" alt="admin-page">
         <p>{{__ "admin.nav.home"}}</p>
       </div>
     </a>
   {{/if}}
-  <a href="/profile">
+  <a href="/profile" class="home-menu-entry">
     <div class="menu-item">
       <img src="/img/auth/profile.svg" alt="profile-page">
       <p>{{__ "user.nav.profile"}}</p>
     </div>
   </a>
-  <a href="/">
+  <a href="/" class="home-menu-entry">
     <div class="menu-item">
       <img src="/img/nav/public.svg" alt="public-page">
       <p>{{__ "index.nav.home"}}</p>
     </div>
   </a>
-  <a href="/logout">
+  <a href="/logout" class="home-menu-entry">
     <div class="menu-item">
       <img src="/img/auth/logout.svg" alt="logout">
       <p>{{__ "auth.nav.logout"}}</p>
     </div>
   </a>
-</div>
+</main>

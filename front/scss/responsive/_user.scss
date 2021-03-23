@@ -1,67 +1,51 @@
 @media screen and (max-width: 640px) {
-  body {
-    display: block;
-    overflow-x: hidden;
-  }
-
-  .feedback-wrapper {
+  nav {
+    flex-direction: column;
+    height: 8rem;
     justify-content: center;
-    left: 0;
-    padding: 0 1rem;
-    top: 4rem;
-    width: 100%;
-  }
-
-  .page-navigation {
-    justify-content: center;
-    left: 0;
     text-align: center;
-    width: 100%;
-  }
 
-  .page-content {
-    padding: 15rem 2rem 2rem;
-    max-width: 100%;
-  }
-
-  .profile-grid {
-    grid-gap: 0;
-    grid-template-columns: none;
-    padding: 0;
-
-    .avatar-wrapper,
-    .info-wrapper {
-      padding: 2rem;
-    }
-
-    .info-wrapper {
-      padding-top: 0;
-      text-align: center;
-
-      p {
-        font-size: 1.2rem;
-      }
-
-      b {
-        display: block;
-      }
-
-      .edit-profile {
-        right: 1rem;
-      }
+    .page-navigation {
+      left: 0;
+      position: relative;
     }
   }
 
-  .edit-profile-wrapper {
-    padding: 2rem;
+  main  {
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
 
-    .avatar-wrapper .delete-avatar {
-      opacity: 1;
-    }
+    &.user-profile-wrapper,
+    &.user-edit-wrapper {
+      .profile-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
 
-    label,
-    input {
-      text-align: center;
+        .info-wrapper {
+          p {
+            font-size: 1.2rem;
+            word-break: break-word;
+          }
+
+          .edit-profile {
+            right: 0;
+          }
+        }
+      }
+
+      .edit-profile-wrapper {
+        padding: 2rem;
+
+        input {
+          text-align: center;
+          width: 100%;
+
+          &[type="file"] {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }

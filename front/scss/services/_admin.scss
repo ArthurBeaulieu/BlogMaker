@@ -1,122 +1,134 @@
-body {
-  height: 100vh;
-  position: relative;
-  width: 100vw;
-}
-
-.page-content {
-  height: 100%;
-  text-align: center;
-  width: 100%;
-}
-
-.register-settings {
-  font-weight: bold;
-
-  div {
-    margin-top: 1rem;
-  }
-
-  input {
-    margin-left: 1rem;
-
-    &[type="number"] {
-      width: 6rem;
-    }
+.admin-menu-wrapper {
+  .admin-menu-entry {
+    @include menu-list;
   }
 }
 
-.admin-user-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.admin-user-list-wrapper {
+  flex-direction: column;
 
-  li {
-    background-color: var(--color-bg);
-    border-radius: var(--radius);
-    display: grid;
-    grid-gap: 4rem;
-    grid-template-columns: 1fr 2fr;
-    list-style: none;
-    padding: 2rem 4rem;
-    margin: 1rem;
-    text-align: center;
+  .register-settings {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
 
-    .avatar-wrapper {
-      img {
-        margin-bottom: 1rem;
-        width: 15rem;
-      }
-
-      button {
-        margin-top: 1rem;
-      }
+    div {
+      margin: 0 1rem;
     }
 
-    .user-wrapper {
-      align-self: center;
-      text-align: left;
+    input {
+      margin-left: 1rem;
 
-      p {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+      &[type="number"] {
+        width: 6rem;
+      }
+    }
+  }
 
-        .verified-account {
-          height: 1.9rem;
-          margin-left: .5rem;
-          vertical-align: bottom;
+  .feedback-wrapper {
+    @include feedback-wrapper;
+  }
+
+  .admin-user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      background-color: var(--color-bg);
+      border-radius: var(--radius);
+      display: grid;
+      grid-gap: 4rem;
+      grid-template-columns: 1fr 2fr;
+      list-style: none;
+      padding: 2rem 4rem;
+      margin: 1rem;
+      text-align: center;
+
+      .avatar-wrapper {
+        img {
+          margin-bottom: 1rem;
+          max-height: 15rem;
+        }
+
+        button {
+          margin-top: 1rem;
+        }
+      }
+
+      .user-wrapper {
+        align-self: center;
+        text-align: left;
+
+        p {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+
+          .verified-account {
+            height: 1.9rem;
+            margin-left: .5rem;
+            vertical-align: bottom;
+          }
         }
       }
     }
   }
 }
 
-.new-article {
-  align-items: center;
-  background-color: var(--color-bg);
-  border: solid 1px var(--color-border);
-  border-radius: var(--radius);
-  display: flex;
-  padding: .5rem 1rem;
-  position: absolute;
-  right: 2rem;
-  text-decoration: none;
-  top: 2rem;
+.admin-articles {
+  flex-direction: column;
 
   img {
     height: 2rem;
-    padding-left: 1rem;
+    width: 2rem;
   }
-}
 
-nav {
-  height: 8rem;
-  position: relative;
-  width: 100%;
-}
+  .new-article {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+    text-decoration: none;
 
-main {
-  height: calc(100% - 8rem);
-  overflow-y: auto;
-  padding: 2rem 4rem;
-  width: 100%;
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: calc(100% - 4rem);
-
-    li {
-      list-style: none;
-
-      img {
-        height: 3rem;
-      }
+    p {
+      padding-right: 1rem;
     }
   }
 
-  p.pagination {
-    height: 4rem;
-    line-height: 4rem;
+  .admin-article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      background-color: var(--color-bg);
+      border-radius: var(--radius);
+      list-style: none;
+      padding: 2rem 4rem;
+      margin: 1rem;
+      position: relative;
+      text-align: center;
+      max-width: 20rem;
+
+      h3 {
+        @include text-ellipsis;
+      }
+
+      .edit-article {
+        height: 2rem;
+        position: absolute;
+        right: 1rem; // Cancel page-content padding
+        top: 1rem;
+        width: 2rem;
+      }
+
+      .published-article {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        line-height: 2rem;
+      }
+    }
   }
 }

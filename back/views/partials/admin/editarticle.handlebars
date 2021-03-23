@@ -1,21 +1,30 @@
-<a href="/admin/articles" class="page-navigation">
-  <img src="/img/nav/previous.svg" alt="admin-page">
-  <p>{{__ "admin.nav.articles"}}</p>
-</a>
-<div>
-  <label for="edit-article-title">Article title</label>
-  <input id="edit-article-title" type="text" name="title" value="{{articleTitle}}">
-  <label for="edit-article-description">Article short description</label>
-  <input id="edit-article-description" type="text" name="description" value="{{articleDescription}}">
-  <label for="edit-article-content">Article content</label>
-  <textarea id="edit-article-content" name="content">{{articleContent}}</textarea>
-  <input id="edit-article-id" type="text" name="id" value="{{articleId}}" hidden>
-  <label for="publish-article">Published</label>
-  <input id="publish-article" type="checkbox" {{#if articlePublished}}checked{{/if}}>
-  <button id="save-article">Save</button>
-</div>
-<div>
-  <h1>Article title</h1>
-  <h4>Article description</h4>
-  <p>Article content</p>
-</div>
+<nav>
+  <a href="/admin/articles" class="page-navigation">
+    <img src="/img/nav/previous.svg" alt="admin-page">
+    <p>{{__ "admin.nav.home"}}</p>
+  </a>
+  <h1>{{__ "admin.pageTitle"}}</h1>
+</nav>
+<main>
+  <div class="feedback-wrapper">
+    <p id="error-output"></p>
+    {{> 'loader/lineloader'}}
+  </div>
+  <div>
+    <label for="edit-article-title">Article title</label>
+    <input id="edit-article-title" type="text" name="title" value="{{articleTitle}}">
+    <label for="edit-article-description">Article short description</label>
+    <input id="edit-article-description" type="text" name="description" value="{{articleDescription}}">
+    <label for="edit-article-content">Article content</label>
+    <textarea id="edit-article-content" name="content">{{articleContent}}</textarea>
+    <input id="edit-article-id" type="text" name="id" value="{{articleId}}" hidden>
+    <label for="publish-article">Published</label>
+    <input id="publish-article" type="checkbox" {{#if articlePublished}}checked{{/if}}>
+    <button id="save-article">Save</button>
+  </div>
+  <div>
+    <h1>Article title</h1>
+    <h4>Article description</h4>
+    <p>Article content</p>
+  </div>
+</main>

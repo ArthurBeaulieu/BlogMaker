@@ -1,3 +1,9 @@
+<div class="feedback-wrapper">
+  <h1>{{__ "auth.pageTitle"}}</h1>
+  {{> 'loader/lineloader'}}
+  <p id="error-output"></p>
+</div>
+
 <h2>{{__ "auth.activate.title"}}</h2>
 {{#if error}}
   <p>{{__ "auth.activate.error"}}</p>

@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const i18n = require('i18n');
 const db = require('../models');
@@ -19,8 +20,8 @@ exports.genInviteCode = () => {
 
 
 // Generates an avatar name. Warning, this could lead to collision
-exports.genAvatarName = () => {
-  return crypto.randomBytes(10).toString('hex').toLowerCase();
+exports.genAvatarName = seed => {
+  return bcrypt.hashSync(seed, 8).toUpperCase();
 };
 
 

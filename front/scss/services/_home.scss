@@ -1,14 +1,5 @@
-body {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  position: relative;
-  width: 100vw;
-}
-
-.page-content {
-  max-width: 90%;
-  padding: 2rem 4rem;
-  text-align: center;
+.home-menu-wrapper {
+  .home-menu-entry {
+    @include menu-list;
+  }
 }

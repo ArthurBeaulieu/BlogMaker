@@ -107,9 +107,7 @@ exports.adminArticlesTemplate = (req, res) => {
         id: opts.articles[i]._id,
         createdAt: utils.formatDate(opts.articles[i].createdAt),
         published: opts.articles[i].published,
-        title: opts.articles[i].title,
-        description: opts.articles[i].description,
-        content: opts.articles[i].content
+        title: opts.articles[i].title
       });
     }
     // TODO handle page number way higher than max count

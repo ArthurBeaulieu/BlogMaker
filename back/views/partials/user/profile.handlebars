@@ -1,26 +1,31 @@
-<a href="/home" class="page-navigation">
-  <img src="/img/nav/home.svg" alt="home-page">
-  <p>{{__ "home.nav.home"}}</p>
-</a>
-<div class="profile-grid">
-  <div class="avatar-wrapper">
-    <img src="{{avatar}}" alt="user-avatar">
-    <ul class="roles">
-      {{#each roles}}
-        <li><b>{{this}}</b></li>
-      {{/each}}
-    </ul>
+<nav>
+  <a href="/home" class="page-navigation">
+    <img src="/img/nav/home.svg" alt="home-page">
+    <p>{{__ "home.nav.home"}}</p>
+  </a>
+  <h1>{{__ "user.pageTitle"}}</h1>
+</nav>
+<main class="user-profile-wrapper">
+  <div class="profile-grid">
+    <div class="avatar-wrapper">
+      <img src="{{avatar}}" alt="user-avatar">
+      <ul class="roles">
+        {{#each roles}}
+          <li><b>{{this}}</b></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="info-wrapper">
+      <p>{{__ "user.profile.username"}} : <b>{{username}}</b></p>
+      <p>{{__ "user.profile.email"}} : <a href="mailto:{{email}}"><b>{{email}}{{#if isVerified}}<img src="/img/auth/verified.svg" class="verified-account" alt="verified-account">{{/if}}</b></a></p>
+      <p>{{__ "user.profile.code"}} : <b>{{code}}</b></p>
+      <p>{{__ "user.profile.depth"}} : <b>{{depth}}</b></p>
+      <p>{{__ "user.profile.godfather"}} : <b>{{godfather}}</b></p>
+      <p>{{__ "user.profile.registration"}} : <b>{{registration}}</b></p>
+      <p>{{__ "user.profile.lastLogin"}} : <b>{{lastLogin}}</b></p>
+      <a href="/profile/edit" class="edit-profile">
+        <img src="/img/action/edit.svg" alt="edit-profile">
+      </a>
+    </div>
   </div>
-  <div class="info-wrapper">
-    <p>{{__ "user.profile.username"}} : <b>{{username}}</b></p>
-    <p>{{__ "user.profile.email"}} : <a href="mailto:{{email}}"><b>{{email}}{{#if isVerified}}<img src="/img/auth/verified.svg" class="verified-account" alt="verified-account">{{/if}}</b></a></p>
-    <p>{{__ "user.profile.code"}} : <b>{{code}}</b></p>
-    <p>{{__ "user.profile.depth"}} : <b>{{depth}}</b></p>
-    <p>{{__ "user.profile.godfather"}} : <b>{{godfather}}</b></p>
-    <p>{{__ "user.profile.registration"}} : <b>{{registration}}</b></p>
-    <p>{{__ "user.profile.lastLogin"}} : <b>{{lastLogin}}</b></p>
-    <a href="/profile/edit" class="edit-profile">
-      <img src="/img/action/edit.svg" alt="edit-profile">
-    </a>
-  </div>
-</div>
+</main>

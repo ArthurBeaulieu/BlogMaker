@@ -301,7 +301,7 @@ exports.deleteAvatar = (req, res) => {
       user.avatar = user.avatarList[user.avatarList.length - 1];
       // Re-generate a random identicon for user if no avatar are left
       if (user.avatarList.length === 0) {
-        const avatarName = `${utils.genAvatarName()}`;
+        const avatarName = `${utils.genAvatarName(user.username + new Date())}`;
         new identicon(avatarName);
         user.avatar = `${avatarName}.png`;
         user.avatarList.push(`${avatarName}.png`);
@@ -329,7 +329,7 @@ exports.uploadAvatar = (req, res) => {
   UserHelper.get({ id: req.userId }).then(user => {
     const tempPath = req.file.path;
     const ext = path.extname(req.file.originalname).toLowerCase();
-    const avatarName = `${utils.genAvatarName()}${ext}`;
+    const avatarName = `${utils.genAvatarName(user.username + new Date())}${ext}`;
     const targetPath = path.join(__dirname, `../../assets/img/avatars/${avatarName}`);
     const acceptedExt = fileConfig.allowedImgExt;
     if (acceptedExt.indexOf(ext) !== -1) {

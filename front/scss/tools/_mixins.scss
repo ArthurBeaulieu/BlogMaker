@@ -1,0 +1,53 @@
+@mixin menu-list {
+  font-weight: bold;
+  text-decoration: none;
+
+  .menu-item {
+    align-items: center;
+    border: solid 3px var(--color-border);
+    border-radius: var(--radius);
+    box-sizing: content-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    width: 10rem;
+
+    transition: background-color var(--transition) ease-in;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: var(--color-bg);
+    }
+
+    img {
+      height: 3rem;
+      margin-bottom: 1rem;
+      width: 3rem;
+    }
+  }
+}
+
+@mixin feedback-wrapper {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  position: absolute;
+  top: 1rem;
+
+  p {
+    font-style: italic;
+    padding-right: 2rem;
+  }
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

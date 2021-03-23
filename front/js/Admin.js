@@ -30,6 +30,9 @@ if (lockRegistration && maxDepth && usersList) {
 
           if (res.status === 200) {
             window.location = '/admin/users';
+          } else if (res.code === 'B_PROFILE_UPDATE_ROLE_CANT_REMOVE_ADMIN_FROM_ROOT') {
+            dom.error.innerHTML = res.message;
+            revokeRoleInput.checked = true;
           }
         };
 
@@ -105,7 +108,6 @@ if (lockRegistration && maxDepth && usersList) {
     kom.post('/api/admin/update/settings', parameters).then(processResponse).catch(processResponse);
   });
 }
-
 
 const saveArticle = document.querySelector('#save-article');
 const publishArticle = document.querySelector('#publish-article');

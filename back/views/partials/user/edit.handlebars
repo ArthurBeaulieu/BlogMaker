@@ -1,45 +1,54 @@
-<a href="/profile" class="page-navigation">
-  <img src="/img/nav/previous.svg" alt="profile-page">
-  <p>{{__ "user.nav.profile"}}</p>
-</a>
-<div class="edit-profile-wrapper">
-  <form id="edit-profile-avatar-form" enctype="multipart/form-data">
-    <div id="avatars" class="avatar-list">
-      <div class="avatar-wrapper">
-        <img src="{{avatar}}" class="active avatar" alt="current-user-avatar">
-        <img src="/img/action/delete.svg" class="delete-avatar" alt="delete-avatar">
-        <img src="/img/auth/verified.svg" class="active-avatar" alt="active-avatar">
-      </div>
-      {{#each avatarList}}
-        <div class="avatar-wrapper">
-          <img src="{{this}}" class="avatar" alt="old-user-avatar">
-          <img src="/img/action/delete.svg" class="delete-avatar" alt="delete-avatar">
-        </div>
-      {{/each}}
-    </div>
-    <div class="upload-avatar">
-      <label for="avatar">{{__ "user.edit.newAvatar"}}</label>
-      <input id="avatar" type="file" name="avatar" accept="image/*">
-      <input id="upload-profile-avatar-submit" type="submit" value="{{__ "user.edit.submit"}}">
-    </div>
-  </form>
-  <div class="edit-profile-grid">
-    <form id="edit-profile-info-form" class="update-info">
-      <label for="username">{{__ "user.edit.username"}}</label>
-      <input id="username" type="text" name="username" value="{{username}}">
-      <label for="email">{{__ "user.edit.email"}}</label>
-      <input id="email" type="email" name="email" value="{{email}}">
-      <input id="edit-profile-info-submit" type="submit" value="{{__ "user.edit.submit"}}">
-    </form>
-    <form id="edit-profile-password-form" class="update-password">
-      <label for="pass1">{{__ "user.edit.currentPassword"}}</label>
-      <input id="pass1" type="password" name="pass1">
-      <label for="pass2">{{__ "user.edit.newPassword"}}</label>
-      <input id="pass2" type="password" name="pass2">
-      <label for="pass3">{{__ "user.edit.confirmNewPassword"}}</label>
-      <input id="pass3" type="password" name="pass3">
-      <input id="edit-profile-password-submit" type="submit" value="{{__ "user.edit.submit"}}">
-    </form>
+<nav>
+  <a href="/profile" class="page-navigation">
+    <img src="/img/nav/previous.svg" alt="profile-page">
+    <p>{{__ "user.nav.profile"}}</p>
+  </a>
+  <h1>{{__ "user.pageTitle"}}</h1>
+</nav>
+<main class="user-edit-wrapper">
+  <div class="feedback-wrapper">
+    <p id="error-output"></p>
+    {{> 'loader/lineloader'}}
   </div>
-  <button id="delete-account" class="danger">{{__ "user.edit.delete"}}</button>
-</div>
+  <div class="edit-profile-wrapper">
+    <form id="edit-profile-avatar-form" enctype="multipart/form-data">
+      <div id="avatars" class="avatar-list">
+        <div class="avatar-wrapper">
+          <img src="{{avatar}}" class="active avatar" alt="current-user-avatar">
+          <img src="/img/action/delete.svg" class="delete-avatar" alt="delete-avatar">
+          <img src="/img/auth/verified.svg" class="active-avatar" alt="active-avatar">
+        </div>
+        {{#each avatarList}}
+          <div class="avatar-wrapper">
+            <img src="{{this}}" class="avatar" alt="old-user-avatar">
+            <img src="/img/action/delete.svg" class="delete-avatar" alt="delete-avatar">
+          </div>
+        {{/each}}
+      </div>
+      <div class="upload-avatar">
+        <label for="avatar">{{__ "user.edit.newAvatar"}}</label>
+        <input id="avatar" type="file" name="avatar" accept="image/*">
+        <input id="upload-profile-avatar-submit" type="submit" value="{{__ "user.edit.submit"}}">
+      </div>
+    </form>
+    <div class="edit-profile-grid">
+      <form id="edit-profile-info-form" class="update-info">
+        <label for="username">{{__ "user.edit.username"}}</label>
+        <input id="username" type="text" name="username" value="{{username}}">
+        <label for="email">{{__ "user.edit.email"}}</label>
+        <input id="email" type="email" name="email" value="{{email}}">
+        <input id="edit-profile-info-submit" type="submit" value="{{__ "user.edit.submit"}}">
+      </form>
+      <form id="edit-profile-password-form" class="update-password">
+        <label for="pass1">{{__ "user.edit.currentPassword"}}</label>
+        <input id="pass1" type="password" name="pass1">
+        <label for="pass2">{{__ "user.edit.newPassword"}}</label>
+        <input id="pass2" type="password" name="pass2">
+        <label for="pass3">{{__ "user.edit.confirmNewPassword"}}</label>
+        <input id="pass3" type="password" name="pass3">
+        <input id="edit-profile-password-submit" type="submit" value="{{__ "user.edit.submit"}}">
+      </form>
+    </div>
+    <button id="delete-account" class="danger">{{__ "user.edit.delete"}}</button>
+  </div>
+</main>

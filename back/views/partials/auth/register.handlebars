@@ -1,15 +1,26 @@
-<h2>{{__ "auth.register.title"}}</h2>
-<form id="register-form">
-  <label for="username">{{__ "auth.register.username"}}</label>
-  <input id="username" type="text" name="username">
-  <label for="email">{{__ "auth.register.email"}}</label>
-  <input id="email" type="text" name="email">
-  <label for="code">{{__ "auth.register.code"}}</label>
-  <input id="code" type="text" name="code">
-  <label for="pass1">{{__ "auth.register.password"}}</label>
-  <input id="pass1" type="password" name="pass1">
-  <label for="pass2">{{__ "auth.register.confirmPassword"}}</label>
-  <input id="pass2" type="password" name="pass2">
-  <input id="register-submit" type="submit" value="{{__ "auth.register.submit"}}">
-</form>
-<a href="/login">{{__ "auth.nav.login"}}</a>
+<nav>
+  <h1>{{__ "auth.pageTitle"}}</h1>
+</nav>
+<main>
+  <div class="feedback-wrapper">
+    <p id="error-output"></p>
+    {{> 'loader/lineloader'}}
+  </div>
+  <div class="form-wrapper">
+    <h2>{{__ "auth.register.title"}}</h2>
+    <form id="register-form">
+      <label for="username">{{__ "auth.register.username"}}</label>
+      <input id="username" type="text" name="username">
+      <label for="email">{{__ "auth.register.email"}}</label>
+      <input id="email" type="text" name="email">
+      <label for="code">{{__ "auth.register.code"}}</label>
+      <input id="code" type="text" name="code">
+      <label for="pass1">{{__ "auth.register.password"}}</label>
+      <input id="pass1" type="password" name="pass1">
+      <label for="pass2">{{__ "auth.register.confirmPassword"}}</label>
+      <input id="pass2" type="password" name="pass2">
+      <input id="register-submit" type="submit" value="{{__ "auth.register.submit"}}">
+    </form>
+    <a href="/login">{{__ "auth.nav.login"}}</a>
+  </div>
+</main>
